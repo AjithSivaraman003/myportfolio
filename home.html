@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+body{
+    height:100vh;
+    background:#111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Right floating menu */
+.right-menu{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* Menu buttons */
+.menu-item{
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.menu-item:hover{
+    background: #f7b500;
+    color: #000;
+}
+
+/* Active button */
+.menu-item.active{
+    background: #f7b500;
+    color: #000;
+} 
+
+/* Foreground title */
+.main-text{
+    position: relative;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.main-text span{
+    color: #f7b500;
+}
+/* mobile view tab */
+  .mobile-menu li {
+  margin-bottom: 10px; 
+  padding-left: 30px;
+  
+}
+.mobile-menu{
+      text-decoration: none;
+}
+/* main content */
+  .hero{
+        background-color: rgb(49, 46, 46);
+        font-family: Arial, sans-serif;
+            }
+    img{
+        
+        border-radius: 12%;
+        z-index: 1;
+       
+               
+        
+    }
+    .hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+
+  background: linear-gradient(
+    60deg,
+    #ffb400 0%,
+    #ffb400 25%,
+    #111 25%,
+    #111 100%
+  );
+  
+}
+.card2{
+    color: aliceblue;
+    justify-content: center;
+    text-align: left;
+    padding-left: 30px;
+    padding: 8%;
+    margin-right: 50px;
+    
+   
+}
+.card2 h1{
+    font-size: 60px;
+    line-height: 1;
+    font-weight: 700;
+
+  }
+  .card2 p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  button{
+    color: white;
+    background:none;
+    padding: 15px;
+    font-size: 20px;
+    border-color: white ;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color:#ffb400;
+  }
+
+span{
+    color: #ffb400;
+}
+
+h1 span {
+  display: block;       /* If each line is inside span */
+  margin-bottom: 5px;
+}
+.pict{
+	padding-top: 40px;
+	
+}
+
+.pict img{
+	border-radius: 20%;
+	text-align: center;
+}
+.card2{
+	
+	padding: 30px;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+/* mobile view page start */
+
+.pict{
+	padding-top: 30%;
+	
+}
+
+.pict img{
+	 width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #575656;
+
+}
+.card3{
+	text-align: center;
+	padding: 30px;
+}
+/* mobile view page end */
+
+
+</style>
+<body>
+    
+    <div class="navbar-expand-md d-none d-md-block">
+<div class="right-menu ">
+  <a href="home.html" class="menu-item active "><i class="fa fa-home"></i></a>
+  <a href="menu.html" class="menu-item "><i class="fa fa-user"></i></a>
+  <a href="portfolio.html" class="menu-item "><i class="fa fa-briefcase"></i></a>
+  <a href="contact.html" class="menu-item"><i class="fa fa-envelope"></i></a>
+  <a href="#" class="menu-item"><i class="fa fa-comment"></i></a>
+</div>
+</div>
+
+
+<nav class="navbar bg-dark d-md-none px-3">
+  <button class="btn text-white ms-auto"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu">
+    <i class="fa fa-bars fs-4"></i>
+  </button>
+</nav>
+<div class="offcanvas offcanvas-end bg-dark text-white"
+     tabindex="-1"
+     id="mobileMenu">
+
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close btn-close-white ms-auto"
+            data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body p-0">
+    <ul class="list-unstyled mobile-menu">
+      <li class="active">
+        <a href="home.html"><i class="fa fa-home"></i> HOME</a>
+      </li>
+      <li>
+        <a href="menu.html"><i class="fa fa-user"></i> ABOUT</a>
+      </li>
+      <li>
+        <a href="portfolio.html"> <i class="fa fa-folder"></i> PORTFOLIO</a>
+      </li>
+      <li>
+        <a href="contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+      </li>
+      <li>
+       <a href="#"> <i class="fa fa-comment"></i> BLOG</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--navbar end-->
+
+<!--mobile view start-->
+<div class="container d-md-none">
+  <div class="row g-4">
+    <div class="pict col-12 d-flex justify-content-center ">
+   <img src="profile2.png"  class="img-fluid">
+   </div>
+ <div class="col-12 justify-content-center ">
+        <div class="card3">
+      <h1><span>I'M AJITH S</span></h1>
+      <h1>WEB DEVELOPER</h1>
+      <p>A passionate PHP Developer Fresher with 2 years of real-world WordPress experience.
+        Experienced in web design, theme customization, and dynamic websites.
+        Turning ideas into clean, effective, and engaging web experiences.</p>
+      <button type="button"><a href="menu.html">More About Me</a></button>
+    </div>
+    </div>
+    </div>
+  </div>
+
+<!--mobile view end-->
+
+
+<div class="d-none d-md-block">
+<div class="hero row align-items-center ">
+  <div class="col-12 col-md-4">
+         <img src="profile.jpg" width="400" height="400px";>
+      </div>
+
+  <div class="col-12 col-md-8">
+    <div class="card2">
+      <h1><span>I'M AJITH S</span></h1>
+      <h1>WEB DEVELOPER</h1>
+      <p>A passionate PHP Developer Fresher with 2 years of real-world WordPress experience.
+Experienced in web design, theme customization, and dynamic websites.
+Turning ideas into clean, effective, and engaging web experiences.</p>
+      <button type="button"><a href="menu.html">More About Me</a></button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+<script>
+document.querySelectorAll('.menu-item').forEach(item=>{
+    item.addEventListener('click',()=>{
+        document.querySelectorAll('.menu-item').forEach(i=>i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>

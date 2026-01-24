@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>about me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+body{
+    height:120vh;
+    background:#111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Right floating menu */
+.right-menu{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* Menu buttons */
+.menu-item{
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.menu-item:hover{
+    background: #f7b500;
+    color: #000;
+}
+
+/* Active button */
+.menu-item.active{
+    background: #f7b500;
+    color: #000;
+}
+
+
+/* Container */
+.title-wrapper{
+    position: relative;
+    width: fit-content;
+    margin: 80px auto;
+}
+
+/* Background text */
+.bg-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 95px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.08);
+    letter-spacing: 10px;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Foreground title */
+.main-text{
+    position: relative;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+    
+}
+
+
+.main-text span{
+    color: #f7b500;
+}
+
+.card{
+border: none;   
+margin: 12px;
+}
+
+.box{
+  margin: 10%;
+}
+
+/* mobile view tab */
+  .mobile-menu li {
+  margin-bottom: 10px; 
+  padding-left: 30px;
+  
+}
+.mobile-menu{
+      text-decoration: none;
+}
+
+.project-card {
+  height: 230px;
+}
+
+.project-card img {
+  height: 100%;
+  object-fit: cover;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+/* overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #ffb400;
+  opacity: 0;
+  transition: all 0.4s ease;
+  transform: translateY(100%);
+}
+
+/* hover effect */
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+</style>
+<body>
+
+    <div class="navbar-expand-md d-none d-md-block">
+<div class="right-menu ">
+  <a href="home.html" class="menu-item "><i class="fa fa-home"></i></a>
+  <a href="menu.html" class="menu-item "><i class="fa fa-user"></i></a>
+  <a href="portfolio.html" class="menu-item active"><i class="fa fa-briefcase"></i></a>
+  <a href="contact.html" class="menu-item"><i class="fa fa-envelope"></i></a>
+  <a href="#" class="menu-item"><i class="fa fa-comment"></i></a>
+</div>
+</div>
+
+<!--mob tab view start-->
+<nav class="navbar bg-dark d-md-none px-3">
+   <div class="d-block d-md-none">
+  <h5 style="font-size: 28px;" class="main-text">
+      MY<span> PORTFOLIO</span>
+    </h5>
+</div>
+   <button class="btn text-white ms-auto"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu">
+    <i class="fa fa-bars fs-4"></i>
+  </button>
+</nav>
+<div class="offcanvas offcanvas-end bg-dark text-white"
+     tabindex="-1"
+     id="mobileMenu">
+
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close btn-close-white ms-auto"
+            data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body p-0">
+    <ul class="list-unstyled mobile-menu">
+      <li class="active">
+        <a href="home.html"><i class="fa fa-home"></i> HOME</a>
+      </li>
+      <li>
+        <a href="menu.html"><i class="fa fa-user"></i> ABOUT</a>
+      </li>
+      <li>
+        <a href="portfolio.html"> <i class="fa fa-folder"></i> PORTFOLIO</a>
+      </li>
+      <li>
+        <a href="contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+      </li>
+      <li>
+       <a href="#"> <i class="fa fa-comment"></i> BLOG</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--mob tab view end-->
+
+<div class="d-none d-md-block">
+ <div class="title-wrapper">
+    <h1 class="bg-text">WORKS</h1>
+    <h2 class="main-text">
+      MY<span> PORTFOLIO</span>
+    </h2>
+  </div>
+</div>
+
+<!--cards start-->
+
+<div class="row g-4 box">
+   <div class="col-sm-6 col-md-4">
+    <div class="position-relative overflow-hidden rounded project-card">
+
+    <img src="work1.png" class="card-img-top" alt="project">
+
+    <div class="overlay d-flex align-items-center justify-content-center"data-bs-toggle="modal" data-bs-target="#cardModal1">
+      <h5 class="text-white">WORDPRESS PROJECT</h5></a>
+    </div>
+  </div>
+
+<!--modal start-->
+
+
+  <div class="modal fade" id="cardModal1" tabindex="-1">
+  <div class="modal-dialog modal-md modal-dialog-centered ">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">WORD PRESS WEBSITE</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div id="cardCarousel1" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="card bg-secondary text-white">
+                <img src="work1.png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text"> Steel construction industry.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="card bg-secondary text-white">
+                <img src="work1.2.png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text">Link :- steeldreams.in/</p>
+                    </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" data-bs-target="#cardCarousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#cardCarousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--modal end-->
+
+<div class="col-sm-6 col-md-4">
+    <div class="position-relative overflow-hidden rounded project-card">
+
+    <img src="work2 (2).png" class="card-img-top" alt="project">
+
+    <div class="overlay d-flex align-items-center justify-content-center"data-bs-toggle="modal" data-bs-target="#cardModal2">
+      <h5 class="text-white">WORDPRESS PROJECT</h5></a>
+    </div>
+  </div>
+
+<!--modal start-->
+
+
+  <div class="modal fade" id="cardModal2" tabindex="-1">
+  <div class="modal-dialog modal-md modal-dialog-centered ">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">WORD PRESS WEBSITE</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div id="cardCarousel2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="card bg-secondary text-white">
+                <img src="work2 (1).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text"> Holy Grace b school.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="card bg-secondary text-white">
+                <img src="work2 (2).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text">Link :- holygracebschool.org/</p>
+                    </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" data-bs-target="#cardCarousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#cardCarousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<div class="col-sm-6 col-md-4">
+    <div class="position-relative overflow-hidden rounded project-card">
+
+    <img src="work3 (1).png" class="card-img-top" alt="project">
+
+    <div class="overlay d-flex align-items-center justify-content-center"data-bs-toggle="modal" data-bs-target="#cardModal3">
+      <h5 class="text-white">WORDPRESS PROJECT</h5></a>
+    </div>
+  </div>
+
+<!--modal start-->
+
+
+  <div class="modal fade" id="cardModal3" tabindex="-1">
+  <div class="modal-dialog modal-md modal-dialog-centered ">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">WORD PRESS WEBSITE</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div id="cardCarousel3" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="card bg-secondary text-white">
+                <img src="work3 (1).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text"> bodhi cherai pool resort.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="card bg-secondary text-white">
+                <img src="work3 (2).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text">Link :- bodhicherai.com</p>
+                    </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" data-bs-target="#cardCarousel3" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#cardCarousel3" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+ <div class="col-sm-6 col-md-4">
+    <div class="position-relative overflow-hidden rounded project-card">
+
+    <img src="work4 (2).png" class="card-img-top" alt="project">
+
+    <div class="overlay d-flex align-items-center justify-content-center"data-bs-toggle="modal" data-bs-target="#cardModal4">
+      <h5 class="text-white">WORDPRESS PROJECT</h5></a>
+    </div>
+  </div>
+
+<!--modal start-->
+
+
+  <div class="modal fade" id="cardModal4" tabindex="-1">
+  <div class="modal-dialog modal-md modal-dialog-centered ">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">WORD PRESS WEBSITE</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div id="cardCarousel4" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="card bg-secondary text-white">
+                <img src="work4 (1).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text">Healthcare Solutions.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="card bg-secondary text-white">
+                <img src="work4 (2).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Wordpress website</h5>
+                  <p class="card-text">Link :- careonhealthcare.com/</p>
+                    </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" data-bs-target="#cardCarousel4" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#cardCarousel4" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--modal end--> 
+
+
+<div class="col-sm-6 col-md-4">
+    <div class="position-relative overflow-hidden rounded project-card">
+
+    <img src="work5 (3).png" class="card-img-top" alt="project">
+
+    <div class="overlay d-flex align-items-center justify-content-center"data-bs-toggle="modal" data-bs-target="#cardModal5">
+      <h5 class="text-white">HTML PROJECT</h5></a>
+    </div>
+  </div>
+
+<!--modal start-->
+
+
+  <div class="modal fade" id="cardModal5" tabindex="-1">
+  <div class="modal-dialog modal-md modal-dialog-centered ">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">SINGLE PAGE WEBSITE</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div id="cardCarousel5" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="card bg-secondary text-white">
+                <img src="work5 (3).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">HTML website</h5>
+                  <p class="card-text">Healthcare single page.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="card bg-secondary text-white">
+                <img src="work5 (2).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title"> HTML website</h5>
+                  <p class="card-text">Use:- HTML, CSS, JS</p>
+                    </div>
+              </div>
+            </div>
+
+
+              <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="card bg-secondary text-white">
+                <img src="work5 (1).png" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">HTML website</h5>
+                  <p class="card-text">Use modal for  application form</p>
+                    </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" data-bs-target="#cardCarousel5" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" data-bs-target="#cardCarousel5" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--modal end--> 
+</div>
+<!--cards end-->
+  
+
+
+
+
+</body>
+<script>
+document.querySelectorAll('.menu-item').forEach(item=>{
+    item.addEventListener('click',()=>{
+        document.querySelectorAll('.menu-item').forEach(i=>i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
