@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>about me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+body{
+    height:200vh;
+    background:#111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Right floating menu */
+.right-menu{
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* Menu buttons */
+.menu-item{
+    width: 50px;
+    height: 50px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.menu-item:hover{
+    background: #f7b500;
+    color: #000;
+}
+
+/* Active button */
+.menu-item.active{
+    background: #f7b500;
+    color: #000;
+}
+
+
+/* Container */
+.title-wrapper{
+    position: relative;
+    width: fit-content;
+    margin: 80px auto;
+}
+
+/* Background text */
+.bg-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.08);
+    letter-spacing: 10px;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Foreground title */
+.main-text{
+    position: relative;
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.main-text span{
+    color: #f7b500;
+}
+
+button {
+    color: white;
+    background: none;
+    padding: 12px;
+    font-size: 12px;
+    border-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #ffb400;
+    color: #111;
+  }
+
+  .c1{
+    border: #ffb400 solid 2px;
+     display: grid;
+  place-items: center;
+  text-align: center;
+  }
+/*experence details*/
+.timeline-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #333;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 45px;
+  height: 45px;
+  background: #ffc107;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.year {
+  display: inline-block;
+  background: #222;
+  color: #aaa;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.timeline-item h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.timeline-item h3 span {
+  color: #aaa;
+  font-weight: normal;
+}
+
+.timeline-item p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* mobile view tab */
+  .mobile-menu li {
+  margin-bottom: 10px; 
+  padding-left: 30px;
+  
+}
+.mobile-menu{
+      text-decoration: none;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.Container p{
+  margin-bottom: 20px;
+}
+
+
+/* skill section start */
+.skills-section {
+  background: #111;
+}
+
+.skill-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background:
+    conic-gradient(#ffc107 calc(var(--value) * 1%), #2b2b2b 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.skill-circle::before {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.skill-circle span {
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.skill-text {
+  color: #fff;
+  margin-top: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* skill section end */
+
+</style>
+<body>
+
+<div class="navbar-expand-md d-none d-md-block">
+<div class="right-menu ">
+  <a href="home.html" class="menu-item "><i class="fa fa-home"></i></a>
+  <a href="menu.html" class="menu-item active"><i class="fa fa-user"></i></a>
+  <a href="portfolio.html" class="menu-item "><i class="fa fa-briefcase"></i></a>
+  <a href="contact.html" class="menu-item"><i class="fa fa-envelope"></i></a>
+  <a href="#" class="menu-item"><i class="fa fa-comment"></i></a>
+</div>
+</div>
+
+<nav class="navbar bg-dark d-md-none px-3">
+   <div class="d-block d-md-none">
+  <h5 style="font-size: 28px;" class="main-text">
+      ABOUT<span> ME</span>
+    </h5>
+</div>
+  <button class="btn text-white ms-auto"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu">
+    <i class="fa fa-bars fs-4"></i>
+  </button>
+</nav>
+<div class="offcanvas offcanvas-end bg-dark text-white"
+     tabindex="-1"
+     id="mobileMenu">
+
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close btn-close-white ms-auto"
+            data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body p-0">
+    <ul class="list-unstyled mobile-menu">
+      <li class="active">
+        <a href="home.html"><i class="fa fa-home"></i> HOME</a>
+      </li>
+      <li>
+        <a href="menu.html"><i class="fa fa-user"></i> ABOUT</a>
+      </li>
+      <li>
+        <a href="portfolio.html"> <i class="fa fa-folder"></i> PORTFOLIO</a>
+      </li>
+      <li>
+        <a href="contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+      </li>
+      <li>
+       <a href="#"> <i class="fa fa-comment"></i> BLOG</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="d-none d-md-block">
+ <div class="title-wrapper">
+    <h1 class="bg-text">RESUME</h1>
+    <h2 class="main-text">
+      ABOUT<span> ME</span>
+    </h2>
+  </div>
+</div>
+  
+    <div class="Container m-5">
+        <h3>PERSONAL INFORMATION</h3>
+        <div class="row">
+        <div class=" col-6 col-sm-6 col-md-3">
+      
+        <p>first name: Ajith</p>
+         <p>Last name: S</p>
+         <p>Git id: AjithSivaraman003</p>
+         <p>Company name: </p>
+         <button>DOWNLOAD CV</button><br>
+        </div>
+        <div class="col-6 col-sm-6 col-md-3">
+        <p>Place: Palakkad</p>
+         <p>Phone no: 09 123456789</p>
+         <p>Email id: ajithdeveloper003@gmail.com</p>
+         <p>Linkedin id: ajith-sivaraman</p>
+        
+         
+        </div>
+
+        
+        
+      <!-- CARD 1 -->
+       
+    <div class="c1 col-sm-6 col-md-3">
+      <div class="stat-card text-center">
+        <h2 class="stat-number">2<span>+</span></h2>
+        <div class="line"></div>
+        <p class="stat-text">YEARS OF<br>WORD PRESS</BR>EXPERIENCE</p>
+      </div>
+    </div>
+    
+
+    <!-- CARD 2 -->
+      
+    <div class="c1 col-sm-6 col-md-3  ">
+      <div class="stat-card text-center">
+        <h2 class="stat-number">10<span>+</span></h2>
+        <div class="line"></div>
+        <p class="stat-text">HAPPY<br>CUSTOMERS</p>
+      </div>
+    </div>
+     </div>
+ </div>
+
+<section class="timeline-section">
+  <h2 class="section-title">EXPERIENCE & EDUCATION</h2>
+
+  <div class="timeline">
+
+    <!-- LEFT ITEM -->
+        <div class="timeline-item">
+      <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+      <span class="year">2025 Oct - Present</span>
+
+      <h3>COURSE <span>— PHP FULLSTACK DEVELOPER</span></h3>
+      <p>Scope India Institute, Kochi.</p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="icon"><i class="fa fa-briefcase"></i></span>
+      <span class="year">2024  Nov - 2025 Jun</span>
+
+      <h3>WORD PRESS DEVELOPER <span>— TECHNOWAND - KOCHI</span></h3>
+      <p>Design and develop WordPress websites,Backend support.</p>
+    </div>
+
+     <div class="timeline-item">
+      <span class="icon"><i class="fa fa-briefcase"></i></span>
+      <span class="year">2022 Jul - 2024  Jun</span>
+
+      <h3>DIGITAL MARKETING CUM WORDPRESS DEVELOPER <span>— GO DIGITAL HUB - KOCHI</span></h3>
+      <p>Develop wordpress website and handling digital marketing works.</p>
+    </div>
+
+    <!-- RIGHT ITEM -->
+   
+     <div class="timeline-item">
+      <span class="icon"><i class="fa fa-briefcase"></i></span>
+      <span class="year">2022 Jan - 2022 Jul</span>
+
+      <h3>DIGITAL MARETING EXECUTIVE<span>— SAFETY CATCH  - KOCHI</span></h3>
+      <p>Handing social media digital marketing promotions.</p>
+    </div>
+
+
+     <div class="timeline-item">
+      <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+      <span class="year">2021 Jul - 2022 Jan</span>
+
+      <h3>COURSE <span>— DIGITAL MARKETING</span></h3>
+      <p>Transorze solution, Kochi.</p>
+    </div>
+
+     <div class="timeline-item">
+      <span class="icon"><i class="fa fa-graduation-cap"></i></span>
+      <span class="year">2011 - 2015</span>
+
+      <h3>ENGINEERING DEGREE (EEE) <span>— CHENNAI UNIVERSITY</span></h3>
+      <p>JCT College of Engineering & Technonology, Coimbatore.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- skillsection start -->
+
+<section class="skills-section py-5">
+  <div class="container text-center">
+    <h2 class="text-white mb-5">MY SKILLS</h2>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- Skill -->
+      <div class="col-6 col-md-3">
+        <div class="skill-circle" style="--value:85">
+          <span>85%</span>
+        </div>
+        <p class="skill-text">HTML</p>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-circle" style="--value:70">
+          <span>70%</span>
+        </div>
+        <p class="skill-text">JAVASCRIPT</p>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-circle" style="--value:80">
+          <span>80%</span>
+        </div>
+        <p class="skill-text">CSS</p>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="skill-circle" style="--value:50">
+          <span>50%</span>
+        </div>
+        <p class="skill-text">PHP</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- skillsection end -->
+
+
+
+</body>
+<script>
+document.querySelectorAll('.menu-item').forEach(item=>{
+    item.addEventListener('click',()=>{
+        document.querySelectorAll('.menu-item').forEach(i=>i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</html>
